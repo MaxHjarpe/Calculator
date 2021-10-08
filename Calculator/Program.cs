@@ -9,7 +9,7 @@ namespace Calculator
         {
             double num1, num2, resultat; 
             char[] operatorer = { '*', '/', '-', '+' }; //En array av operatorerna som vi letar efter i användarens inmatning
-            List<string> svar = new List<string>(); //Listan som vi sparar historiken i
+            List<string> svar = new List<string>(); //Listan som vi sparar alla uträkningar i
 
             Console.WriteLine("Hej och välkommen till miniräknaren i C#\nVar god skriv in ett tal, " +
                 "följt av en operator \"+\", \"-\", \"*\" eller \"/\", följt av ett till tal." +
