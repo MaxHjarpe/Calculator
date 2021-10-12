@@ -55,27 +55,27 @@ namespace Calculator
                         continue;
                     }
                     
-                    switch (vilkenOperator) //Beroende på vilken operator användaren matat in, gör den uträkningen
+                    switch (vilkenOperator) //Beroende på vilken operator användaren matat in, gör den uträkningen, mata ut svaret och spara det
                     {
                         case "+":
-                            resultat = (num1 + num2); //Räkna ut resultat
-                            Console.WriteLine(num1 + "+" + num2 + " = " + resultat + "\n"); //Mata ut resultat
-                            svar.Add(num1 + "+" + num2 + " = " + resultat); //Spara resultat i listan
+                            resultat = (num1 + num2);
+                            Console.WriteLine(num1 + "+" + num2 + " = " + resultat + "\n"); 
+                            svar.Add(num1 + "+" + num2 + " = " + resultat); 
                             break;
                         case "-":
-                            resultat = (num1 - num2); //Räkna ut resultat
-                            Console.WriteLine(num1 + "-" + num2 + " = " + resultat + "\n"); //Mata ut resultat
-                            svar.Add(num1 + "-" + num2 + " = " + resultat); //Spara resultat i listan
+                            resultat = (num1 - num2);
+                            Console.WriteLine(num1 + "-" + num2 + " = " + resultat + "\n"); 
+                            svar.Add(num1 + "-" + num2 + " = " + resultat); 
                             break;
                         case "*":
-                            resultat = (num1 * num2); //Räkna ut resultat
-                            Console.WriteLine(num1 + "*" + num2 + " = " + resultat + "\n"); //Mata ut resultat
-                            svar.Add(num1 + "*" + num2 + " = " + resultat); //Spara resultat i listan
+                            resultat = (num1 * num2);
+                            Console.WriteLine(num1 + "*" + num2 + " = " + resultat + "\n"); 
+                            svar.Add(num1 + "*" + num2 + " = " + resultat); 
                             break;
                         case "/":
-                            resultat = (num1 / num2); //Räkna ut resultat
-                            Console.WriteLine(num1 + "/" + num2 + " = " + resultat + "\n"); //Mata ut resultat
-                            svar.Add(num1 + "/" + num2 + " = " + resultat); //Spara resultat i listan
+                            resultat = (num1 / num2);
+                            Console.WriteLine(num1 + "/" + num2 + " = " + resultat + "\n"); 
+                            svar.Add(num1 + "/" + num2 + " = " + resultat); 
                             break;
                     }
                 } 
