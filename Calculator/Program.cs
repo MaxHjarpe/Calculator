@@ -22,7 +22,7 @@ namespace Calculator
             
             while (true)
             {
-                string anvInmatning = Console.ReadLine(); //Användarens inmatning
+                string anvInmatning = Console.ReadLine();
                 anvInmatning.Trim(); //Tar bort whitespaces för enklare hantering med substring senare 
                 if (anvInmatning.Contains("MARCUS")) //Om strängen innehåller "MARCUS" så skrivs historiken ut och programmet avslutas
                 {
@@ -57,7 +57,8 @@ namespace Calculator
                         continue;
                     }
                     
-                    switch (vilkenOperator) //Gör uträkningen, matar ut svaret och sparar det i listan
+                    switch (vilkenOperator) //Gör uträkningen, matar ut svaret och sparar det i listan.
+                                            //OBS Om resultatet blir ett decimaltal utförs ingen formatering för att snygga till utskrift.
                     {
                         case "+":
                             double resultat = (num1 + num2);
