@@ -22,9 +22,9 @@ namespace Calculator
             
             while (true)
             {
-                string inmatning = Console.ReadLine(); //Användarens inmatning
-                inmatning.Trim(); //Tar bort whitespaces för enklare hantering med substring senare 
-                if (inmatning.Contains("MARCUS")) //Om strängen innehåller "MARCUS" så skrivs historiken ut och programmet avslutas
+                string anvInmatning = Console.ReadLine(); //Användarens inmatning
+                anvInmatning.Trim(); //Tar bort whitespaces för enklare hantering med substring senare 
+                if (anvInmatning.Contains("MARCUS")) //Om strängen innehåller "MARCUS" så skrivs historiken ut och programmet avslutas
                 {
                     Console.WriteLine("\nHej!\n\nHistorik:"); 
                     foreach (string historik in svar) //Går igenom alla sparade uträkningar och skriver ut dem
@@ -34,12 +34,12 @@ namespace Calculator
                     break;
                 }
                 
-                int vartOperator = inmatning.IndexOfAny(operatorer); //Hitta index på operatorn användaren matat in
+                int vartOperator = anvInmatning.IndexOfAny(operatorer); //Hitta index på operatorn användaren matat in
                 if (vartOperator != -1) //Om inte någon av operatorerna i vår array finns i inmatningen får användaren skriva om, se else-sats längst ner
                 {
-                    string forstaTalet = inmatning.Substring(0, vartOperator); //Plocka ut första talet med hjälp av index på operatorn
-                    string andraTalet = inmatning.Substring(vartOperator + 1); //Plocka ut andra talet på samma sätt som tidigare, OBS blir fel om fler operatorer används
-                    string vilkenOperator = inmatning.Substring(vartOperator, 1); //Plocka ut VILKEN operator som matats in 
+                    string forstaTalet = anvInmatning.Substring(0, vartOperator); //Plocka ut första talet med hjälp av index på operatorn
+                    string andraTalet = anvInmatning.Substring(vartOperator + 1); //Plocka ut andra talet på samma sätt som tidigare, OBS blir fel om fler operatorer används
+                    string vilkenOperator = anvInmatning.Substring(vartOperator, 1); //Plocka ut VILKEN operator som matats in 
                     
                     if (!double.TryParse(forstaTalet, out double num1)) //Kolla strängen efter ett tal och gör om till double om det går, annars får användaren göra om
                     {
@@ -83,7 +83,7 @@ namespace Calculator
                 } 
                 else //Användaren har matat in något som inte innehåller en operator, får då göra om
                 {
-                    Console.WriteLine("Vad menar du med " + "\"" + inmatning + "\"" + "?\nMata in lite matte istället!");
+                    Console.WriteLine("Vad menar du med " + "\"" + anvInmatning + "\"" + "?\nMata in lite matte istället!");
                 }
             }
         }
